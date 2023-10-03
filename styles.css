@@ -73,6 +73,8 @@ game {
 }
 .buttons {
   display: flex;
+  width: 50%;
+  margin: auto;
 }
 
 button {
