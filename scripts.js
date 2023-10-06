@@ -1,13 +1,14 @@
 const cards = document.querySelectorAll('.card');
 const timeValue = document.getElementById("time");
 const begin = document.getElementById("start");
+const moves = document.getElementById("moves-count");
+const startButton = document.getElementById("start");
+const stopButton = document.getElementById("stop");
 let hasFlippedCard = false;
 let lockBoard = true;
 let isTheGameOver = false;
 let firstCard, secondCard;
-
-
-
+let movesCount = 0
 
 var minutes = 00;
 var seconds = 00;
@@ -15,10 +16,6 @@ var appendSeconds = document.getElementById("seconds")
 var appendMinutes = document.getElementById("minutes")
 var Interval;
 
-
-function stopClock() {
-  clearInterval(Interval);
-}
 
 function startTimer() {
   seconds++;
@@ -34,7 +31,7 @@ function startTimer() {
 
   if (seconds > 59) {
     minutes++;
-    appendMinutes.innerHTML = "0" + minutes;
+    appendMinutes.innerHTML = "<span>Time:0</span>" + minutes;
     seconds = 0;
     appendSeconds.innerHTML = "0" + 0;
   }
@@ -45,15 +42,30 @@ function startTimer() {
 
 }
 
+function stopClock() {
+  clearInterval(Interval);
+}
+
+const movesCounter = () => {
+  movesCount += 1;
+  moves.innerHTML = `<span>Moves:</span>${movesCount}`;
+};
 
 begin.addEventListener("click", function () {
   start();
+  moves.innerHTML = `<span>Moves:</span> ${movesCount}`;
+ 
 });
 
 function start() {
+  startButton.classList.add("hide");
+  stopButton.classList.remove("hide");
   lockBoard = false;
   clearInterval(Interval);
   Interval = setInterval(startTimer, 1000);
+  movesCount = 0;
+  
+ 
 }
 
 function flipCard() {
@@ -99,6 +111,7 @@ function disableFlip() {
 
 function unflipCards() {
   lockBoard = true;
+  movesCounter();
 
   setTimeout(() => {
     firstCard.classList.remove('flip');

@@ -5,60 +5,64 @@
   <meta charset="UTF-8">
   <title>Memory Game</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=IBM+Plex+Sans+KR&family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <h2 class="title">Halloween Memory Game</h3>
-    <div id="time"><span id="minutes">00</span>:<span id="seconds">00</span></div>
+  <h1 class="title">Tilt Halloween Memory Game</h1>
+    <div id="time"><span id="minutes">Time:00</span>:<span id="seconds">00</span></div>
+    <div id="moves-count">Moves:0</div>
     <game>
       <section class="memory-game">
         <div class="card" data-framework="fred">
-          <img src="img/fred.png" class="card__front" alt="">
+          <img src="img/acid-dan.png" class="card__front" alt="">
           <img src="img/59.svg" class="card__back" alt="">
         </div>
         <div class="card" data-framework="fred">
-          <img src="img/fred.png" class="card__front" alt="">
+          <img src="img/acid-dan.png" class="card__front" alt="">
           <img src="img/59.svg" class="card__back" alt="">
         </div>
         <div class="card" data-framework="hannibal">
-          <img src="img/hannibal.png" class="card__front" alt="">
+          <img src="img/demon.png" class="card__front" alt="">
           <img src="img/59.svg" class="card__back" alt="">
         </div>
         <div class="card" data-framework="hannibal">
-          <img src="img/hannibal.png" class="card__front" alt="">
+          <img src="img/demon.png" class="card__front" alt="">
           <img src="img/59.svg" class="card__back" alt="">
         </div>
         <div class="card" data-framework="pans">
-          <img src="img/pans.png" class="card__front" alt="">
+          <img src="img/mel-skull.png" class="card__front" alt="">
           <img src="img/59.svg" class="card__back" alt="">
         </div>
         <div class="card" data-framework="pans">
-          <img src="img/pans.png" class="card__front" alt="">
+          <img src="img/mel-skull.png" class="card__front" alt="">
           <img src="img/59.svg" class="card__back" alt="">
         </div>
         <div class="card" data-framework="shinning">
-          <img src="img/shinning.png" class="card__front" alt="">
+          <img src="img/nosferatu.png" class="card__front" alt="">
           <img src="img/59.svg" class="card__back" alt="">
         </div>
         <div class="card" data-framework="shinning">
-          <img src="img/shinning.png" class="card__front" alt="">
+          <img src="img/nosferatu.png" class="card__front" alt="">
           <img src="img/59.svg" class="card__back" alt="">
         </div>
         <div class="card" data-framework="hell">
-          <img src="img/hell.png" class="card__front" alt="">
+          <img src="img/werewolf.png" class="card__front" alt="">
           <img src="img/59.svg" class="card__back" alt="">
         </div>
         <div class="card" data-framework="hell">
-          <img src="img/hell.png" class="card__front" alt="">
+          <img src="img/werewolf.png" class="card__front" alt="">
           <img src="img/59.svg" class="card__back" alt="">
         </div>
         <div class="card" data-framework="mike">
-          <img src="img/mike.png" class="card__front" alt="">
+          <img src="img/zumbi-tristan.png" class="card__front" alt="">
           <img src="img/59.svg" class="card__back" alt="">
         </div>
         <div class="card" data-framework="mike">
-          <img src="img/mike.png" class="card__front" alt="">
+          <img src="img/zumbi-tristan.png" class="card__front" alt="">
           <img src="img/59.svg" class="card__back" alt="">
         </div>
       </section>
@@ -67,8 +71,8 @@
       <button id="start" type="button" >
         Start
       </button>
-      <button  type="button" onClick="window.location.reload()">
-        Stop
+      <button  class='hide' id='stop' type="button" onClick="window.location.reload()">
+        Reset
       </button>
     </div>
     <script src="scripts.js"></script>
