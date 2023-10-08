@@ -53,7 +53,7 @@ const movesCounter = () => {
 
 begin.addEventListener("click", function () {
   start();
-  moves.innerHTML = `<span>Moves:</span> ${movesCount}`;
+  
  
 });
 
