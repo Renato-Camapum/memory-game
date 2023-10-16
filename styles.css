@@ -56,6 +56,7 @@ game {
 
 .card__front {
   transform: rotateY(180deg);
+  object-fit: cover;
 }
 
 .title {
