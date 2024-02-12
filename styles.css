@@ -2,20 +2,21 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
 }
 
 body {
   background: #5b0307;
-  height: 100%;
+  height: 80vh;
 }
 
-game {
+.memory-game {
   display: flex;
 }
 
 .memory-game {
-  width: 35%;
-  height: 650px;
+  width: 50%;
+  height: 70vh;
   display: flex;
   flex-wrap: wrap;
   margin: auto;
@@ -102,4 +103,11 @@ button {
 
 .hide {
   display: none;
+}
+
+@media screen and (max-width:480px) {
+  .memory-game {
+    width: 70%;
+    height: 50vh;
+  }
 }
