@@ -11,10 +11,6 @@ body {
 }
 
 .memory-game {
-  display: flex;
-}
-
-.memory-game {
   width: 50%;
   height: 70vh;
   display: flex;
@@ -105,7 +101,7 @@ button {
   display: none;
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width: 720px) {
   .memory-game {
     width: 70%;
     height: 50vh;
