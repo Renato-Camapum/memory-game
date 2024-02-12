@@ -21,6 +21,13 @@ body {
   perspective: 1000px;
 }
 
+@media screen and (max-width: 720px) {
+  .memory-game {
+    width: 90%;
+    height: 50vh;
+  }
+}
+
 .card {
   width: calc(25% - 10px);
   height: calc(33.33% - 10px);
@@ -101,9 +108,3 @@ button {
   display: none;
 }
 
-@media screen and (max-width: 720px) {
-  .memory-game {
-    width: 70%;
-    height: 50vh;
-  }
-}
